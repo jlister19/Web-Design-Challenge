@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Visualization Dashboard</title>
+    <title>Visualize Page</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.jls></script>
@@ -26,11 +26,11 @@
             font-size: 30px;
         }
         img {
-            float: left; 
-            margin: 5px;
+            float: center; 
+            /* margin: 2px; */
         }
         p {
-            text-align: left;
+            /* text-align: left; */
             font-size: 15px;
             font-family: Arial, sans-serif;
         }
@@ -43,7 +43,9 @@
 
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<!-- create the nav bar sm is at 576 pixels; md at 768 [ixel]--> 
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+
 <!-- create the name of the site --> 
     <a class ="navbar-brand" href="index.html" style="font-family: Georgia, serif";>Latitude</a>
 
@@ -61,7 +63,7 @@
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">
                     Plots
-                    </a>
+                </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown" aria-haspopup="true" aria-expanded="false">                
                     <a class="dropdown-item" href="MaxTemp.html">Max Temperature</a>
                     <div class="dropdown-divider"></div>
@@ -71,7 +73,7 @@
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="Windspeed.html">Windspeed</a>
                 </div>
-                </li>
+            </li>
             <li class="nav-item">
                 <a class="nav-link" href="Comparison.html">Comparison</a>
             </li>
@@ -86,33 +88,31 @@
     <div class = "row"> 
     
      <div class ="col-md-8"> 
-     <br>   
-    <h1>Summary: Latitude vs. X </h1>
+   <br>
+    <h1>Wind Speed</h1>
      
     <hr>
 
     <section id="main-bio">
         
         <section id="figure">
-        <a target="blank" href="assets/images/MaxTemp.png"><img id="floated" class="thumbnail" src="assets/images/MaxTemp.png" alt="MaxTemp" class="col-sm-12 col-md-6" style="width:40%";></a>
+        <a target="blank" href="assets/images/Windspeed.png"><img id="floated" class="thumbnail" src="assets/images/Windspeed.png" alt="MaxTemp" class="col-sm-12 col-md-6" style="height:350px" style="width:40%";></a>
         </section>
       
         <br>
-        <p>The purpose of this project was to analyse how weather changes as you get closer to the equator.  To accomplish this analysis, we first pulled data from the OpenWeathterMap API to assemble a dataset on over 500 cities.</p>
-        <br>
-        <p>After assembling the dataset, we used Matplotlb to plot various aspects of the weather vs. lattitude.  Factors we looked at included: temperature, cloudiness, wind speed and humidity.  This site provides the source data and visualizations created as part of the analysis, as well as explanations and descriptions of any trends and correlations witnessed.</p>
+        <p>To create the above plot, I collected weather data for a set of 500 distinct cities that are nearest to a corresponding set of randomly generated coordinates. The code to generate this plot looks at the Windspeed for each of the cities as the latitude approaches the equator.</p>
     
     </section>
     
     </div>
 
       <div class ="col-md-4"> 
-        <br>
       <aside id="Visualizations">
+        <br>
         <h2>Visualizations</h2>
         <hr>
         <ul>
-            <a target="blank" href="assets/images/MaxTemp.png"><img class="thumbnail" src="assets/images/MaxTemp.png" alt="MaxTemp" class="col-sm-12 col-md-6" style="width:40%";></a>
+            <a target="blank" href="assets/images/MaxTemp.png"><img class="thumbnail" src="assets/images/MaxTemp.png" alt="MaxTemp" class="col-sm-12 col-md-6" style="width:40%""></a>
             <a target="blank" href="assets/images/Humidity.png"><img class="thumbnail" src="assets/images/Humidity.png" alt="Humidity" class="col-sm-12 col-md-6" style="width:40%";></a>
             <a target="blank" href="assets/images/Cloudiness.png"><img class="thumbnail" src="assets/images/Cloudiness.png" alt="Cloudiness" class="col-sm-12 col-md-6" style="width:40%";></a>
             <a target="blank" href="assets/images/WindSpeed.png"><img class="thumbnail" src="assets/images/WindSpeed.png" alt="WindSpeed" class="col-sm-12 col-md-6" style="width:40%";></a>
